@@ -21,23 +21,22 @@
     </style>
   </head>
   <body>
-  	</header>
     <div id="map"></div>
     <script>
       var mapId = "mapbox.light",
           accessToken = 'pk.eyJ1IjoiYmVydHNwYWFuIiwiYSI6ImR3dERiQk0ifQ.DLbScmbRohc3Sqv7prfhqw',
           tileUrl = "https://api.tiles.mapbox.com/v4/" + mapId + "/{z}/{x}/{y}.png?access_token=" + accessToken,
-          map = L.map('map', {maxZoom: 17}),
+          map = L.map('map', { maxZoom: 17 }),
           gemeenteStyle = {
             color: "#007ff0",
-            weight: 4,
             fill: false,
             dashArray: "10, 10",
+            weight: 4,
             lineCap: "round",
             lineJoin: "round"
           };
 
-      $.getJSON( "data/gemeente/t/tubbergen.geojson", function(geojson) {
+      $.getJSON("data/gemeente/t/tubbergen.geojson", function(geojson) {
         L.geoJson(geojson, { style: gemeenteStyle }).addTo(map);
       });
 
