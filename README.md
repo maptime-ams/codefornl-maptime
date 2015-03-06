@@ -107,7 +107,7 @@ Met een gratis Mapbox-account kun je één eigen kaartstijl via Mapbox.com publi
 
 #### Download gemeentegrenzen van cbs.nl
 
-(Als je geen QGIS geinstalleerd hebt of wilt installeren, kun de volgende stappen overslaan en naar de stap [_Maak een simpele webpagina met Leaflet_](#maak-een-simpele-webpagina-met-leaflet) gaan.)
+(_Als je geen QGIS geinstalleerd hebt of wilt installeren, kun de volgende stappen overslaan en naar de stap [_Maak een simpele webpagina met Leaflet_](#maak-een-simpele-webpagina-met-leaflet) gaan._)
 
 Via de website van 't CBS is een [Shapefile](http://en.wikipedia.org/wiki/Shapefile) te downloaden met de gemeente-, wijk- en buurtgrenzen uit 2013:
 
@@ -119,33 +119,48 @@ Als je dit ZIP-bestand download en uitpakt, ziet 't er ongeveer zo uit:
 
 #### Bekijk de data in QGIS
 
-
+Download en intalleer [QGIS](http://www2.qgis.org/en/site/), een open source GIS-programma, en open hiermee `gem_2013.shp`.
 
 ![](images/qgis.png)
 
 #### Selecteer je eigen gemeente, en exporteer als GeoJSON
 
-De data van het CBS is
-coördinatensysteem
-http://nl.wikipedia.org/wiki/Rijksdriehoeksco%C3%B6rdinaten
+De data van het CBS is in 't [Nederlandse coördinatensysteem](http://nl.wikipedia.org/wiki/Rijksdriehoeksco%C3%B6rdinaten). Dit is niet handig voor webcartografie. Bij 't exporteren van onze gemeente, kan QGIS de data omzetten naar een andere projectie. Voor 't web is [WGS 84](http://en.wikipedia.org/wiki/World_Geodetic_System) (ofwel EPSG:4326) handig.
 
-GeoJSON
-
-WGS 84
-EPSG:4326
+Selecteer één gemeente met de selectietool van QGIS (het gele vierkantje met wil pijltje), en kies _Layer > Save As..._. Kies GeoJSON als formaat, met _Browse_ een plek voor het bestand op je harde schijf, WGS 84 bij _CRS_. En vink _Save only selected features_ aan!
 
 ![](images/qgis-select.png)
 ![](images/qgis-export.png)
 
-
-
 #### Maak een simpele webpagina met Leaflet
 
+maak nieuwe directory op je harde schijf
+kopieer inhoud van index.html
+
+git clone https://github.com/maptime-ams/animated-borders-d3js.git
+https://github.com/maptime-ams/codefornl-maptime/archive/gh-pages.zip
+
+of download of clone van GitHub
+verplaats of kopieer ook het GeoJSON-bestand dat je net gemaakt hebt in deze directory.
 
 ![](images/textmate.png)
 
+#### Start een eigen webserver!
+
+We kunnen `index.html` in de browser bekijken door te dubbelklikken op het bestand. Echter, omdat we later het GeoJSON-bestand via JavaScript in onze webpagina willen laden is dit niet genoeg. Browsers staan het standaard niet toe dat pagina's data uit externe bronnen laden. Door een eigen webserver te starten overkom je dit probleem.
+
+__Kortom: we hebben een eigen webserver nodig!__ Op een Mac of met Linux kun je eenvoudig de terminal starten, naar de directory gaan waar `index.html` staat, en het volgende commando typen:
+
+    python -m SimpleHTTPServer
+
+Klaar! De webpagina is nu beschikbaar via [http://localhost:8000/](http://localhost:8000/)!
+
+Windows-gebruikers kunnen bijvoorbeeld [Fenix](http://fenixwebserver.com/) gebruiken.
+
 #### Voeg gemeentegrens toe, en je eigenkaartstijl
+
+Pas `index.html` aan en voeg je vervang de bestaande _Map ID_ en [_API access token_](https://www.mapbox.com/account/apps/) voor die van jezelf. En vervang de locatie van het huidige GeoJSON-bestand (`data/gemeente/t/tubbergen.geojson`) voor de naam van het bestand dat je met QGIS hebt geëxporteerd.
+
+Uiteindelijk ziet de webpagina er ongeveer zo uit, maar dan met je eigen gemeente en kaartstijl:
+
 ![](images/leaflet.png)
-
-
-http://maptime-ams.github.io/codefornl-maptime/
