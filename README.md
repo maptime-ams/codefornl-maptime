@@ -163,4 +163,4 @@ Pas `index.html` aan en voeg je vervang de bestaande _Map ID_ en [_API access to
 
 Uiteindelijk ziet de webpagina er ongeveer zo uit, maar dan met je eigen gemeente en kaartstijl:
 
-![](images/leaflet.png)
+[![](images/leaflet.png)](http://maptime-ams.github.io/codefornl-maptime)
