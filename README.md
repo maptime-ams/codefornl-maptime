@@ -105,13 +105,47 @@ Met een gratis Mapbox-account kun je één eigen kaartstijl via Mapbox.com publi
 
 ## Deel 2
 
-- [Gemeentegrenzen van CBS](http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/publicaties/geografische-data/archief/2014/2013-wijk-en-buurtkaart-art.htm)
+#### Download gemeentegrenzen van cbs.nl
+
+(Als je geen QGIS geinstalleerd hebt of wilt installeren, kun de volgende stappen overslaan en naar de stap [_Maak een simpele webpagina met Leaflet_](#maak-een-simpele-webpagina-met-leaflet) gaan.)
+
+Via de website van 't CBS is een [Shapefile](http://en.wikipedia.org/wiki/Shapefile) te downloaden met de gemeente-, wijk- en buurtgrenzen uit 2013:
+
+ - [Gemeentegrenzen van cbs.nl](http://www.cbs.nl/nl-NL/menu/themas/dossiers/nederland-regionaal/publicaties/geografische-data/archief/2014/2013-wijk-en-buurtkaart-art.htm)
+
+Als je dit ZIP-bestand download en uitpakt, ziet 't er ongeveer zo uit:
 
 ![](images/shapefile.png)
+
+#### Bekijk de data in QGIS
+
+
+
 ![](images/qgis.png)
+
+#### Selecteer je eigen gemeente, en exporteer als GeoJSON
+
+De data van het CBS is
+coördinatensysteem
+http://nl.wikipedia.org/wiki/Rijksdriehoeksco%C3%B6rdinaten
+
+GeoJSON
+
+WGS 84
+EPSG:4326
+
 ![](images/qgis-select.png)
 ![](images/qgis-export.png)
+
+
+
+#### Maak een simpele webpagina met Leaflet
+
+
 ![](images/textmate.png)
+
+#### Voeg gemeentegrens toe, en je eigenkaartstijl
 ![](images/leaflet.png)
 
-- http://en.wikipedia.org/wiki/Shapefile
+
+http://maptime-ams.github.io/codefornl-maptime/
