@@ -141,7 +141,7 @@ Dit kan op twee manieren:
 1. Maak nieuwe directory op je harde schijf, maak in deze directory een bestand genaamd `index.html`, en kopieer de inhoud van [`index.html`](index.html) uit deze GitHub-repository in dit nieuwe bestand,
 2. Of [download deze GitHub-repository](https://github.com/maptime-ams/codefornl-maptime/archive/gh-pages.zip) in zijn geheel (als ZIP-bestand) of gebruik Git en voer `git clone https://github.com/maptime-ams/animated-borders-d3js.git` uit.
 
-Als je met QGIS een eigen GeoJSON-bestand gemaakt hebt dien je dit bestand te verplaatsen of te kopiëren naar onze nieuwe directory, anders kun je een van de bestaande GeoJSON-bestanden met gemeentegrenzen uit de directory [`gemeente`](gemeente) gebruiken.
+Als je met QGIS een eigen GeoJSON-bestand gemaakt hebt dien je dit bestand te verplaatsen of te kopiëren naar onze nieuwe directory, anders kun je een van de bestaande GeoJSON-bestanden met gemeentegrenzen uit de directory [`data/gemeente`](data/gemeente) gebruiken.
 
 ![](images/textmate.png)
 
