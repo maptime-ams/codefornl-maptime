@@ -1,16 +1,26 @@
-# Gemeentekaart!
+# Tutorial: Gemeentekaart met Mapbox Studio
 
-__DRAFT!__
+In deze tutorial maken we een eigen webkaart met [Mapbox Studio](https://www.mapbox.com/mapbox-studio/) en [CartoCSS](https://www.mapbox.com/guides/intro-to-studio/#what-is-cartocss), en voegen we gemeentegrenzen toe met [Leaflet]. Deze tutorial is gemaakt voor de Maptime-workshop tijdens het [beginevenement van Code for NL](http://waag.org/nl/event/code-nl-lancering), op 6 maart 2015.
 
-Twee stukken:
+Voor meer informatie over Maptime, zie:
 
-1. Mapbox Studio
-2. Webkaart (Leaflet) met gemeentegrens
+- http://maptime.io/
+- http://maptime-ams.github.io/
+
+![](images/mapbox-studio-cartocss.png)
+
+Voor deze tutorial heb je een paar dingen nodig:
+
+- [Mapbox Studio](https://www.mapbox.com/mapbox-studio/), en een [Mapbox-account](https://www.mapbox.com/signup/).
+- __Een moderne browser__, zoals Firefox, Safari, Chrome, of een recente versie van Internet Explorer.
+- __Een goede texteditor__, bijvoorbeeld [Sublime Text](http://www.sublimetext.com/), [Textmate](http://macromates.com/) of [Notepad++](http://notepad-plus-plus.org/).
+
+De tutorial bestaat uit twee onderdelen:
+
+- __Deel 1__: We downloaden en installeren van Mapbox Studio, we maken een eigen kaartstijl met CartoCSS, en publiceren deze via mapbox.com.
+- __Deel 2__: We downloaden gemeentegrensdata van 't CBS, en we maken een simpele webpagina met HTML en Leaflet.
 
 ## Deel 1
-
-https://www.mapbox.com/mapbox-studio/
-
 - https://www.mapbox.com/guides/intro-to-studio/
 - https://speakerdeck.com/almccon/advanced-cartocss-tricks-foss4g-2014
 
