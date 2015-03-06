@@ -48,13 +48,48 @@ Klik op _Save as_, en kies een locatie op je harde schijf.
 
 #### Maak een eigen kaartstijl!
 
-Nu begint het echte werk!
+Nu begint het echte werk! Met Mapbox Studio kun je je kaart vormgeven met behulp van [CartoCSS](https://www.mapbox.com/guides/intro-to-studio/#what-is-cartocss), een op CSS-gebaseerde stijltaal. Je kunt CartoCSS het beste leren door het gewoon te proberen: kijk naar de met Mapbox Studio meegeleverde voorbeeldkaartstijlen (via [github.com/mapbox](https://github.com/search?utf8=%E2%9C%93&q=user%3Amapbox+language%3Acartocss&type=Repositories&ref=searchresults) kun je er nog meer vinden) en __pas waardes aan en kijk wat er gebeurt__.
+
+Ook staan er veel goede tutorials online, bijvoorbeeld:
 
 - https://www.mapbox.com/guides/intro-to-studio/
 - https://speakerdeck.com/almccon/advanced-cartocss-tricks-foss4g-2014
 
-
 ![](images/mapbox-studio-cartocss.png)
+
+###### Simpele CartoCSS-voorbeelden
+
+Geef de kaart een blauwe achtergrondkleur:
+
+```cartocss
+Map {
+  background-color: #0000ff;
+}
+```
+
+Teken snelwegen met een donkergrijze lijn:
+
+```cartocss
+#road {
+  [class='motorway'] {
+    line-color: #444;
+    line-cap: round;
+    line-width: 0.6;
+  }
+}
+```
+
+###### Documentatie
+
+In Mapbox Studio kun je via de knop _Docs_ documentatie over CartoCSS bekijken.
+
+![](images/mapbox-studio-docs.png)
+
+###### Layers
+
+Via de knop _Layers_ krijg je informatie over de beschikbaren datalagen.
+
+![](images/mapbox-studio-layers.png)
 
 #### Kies een titel, zoomniveau en startpositie
 
